@@ -3,8 +3,6 @@ package ignatov.oleg;
 import ignatov.oleg.exercises.FirstExercise;
 import ignatov.oleg.exercises.SecondExercise;
 
-import java.lang.reflect.Array;
-import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -18,8 +16,9 @@ public class Main {
     }
 
     private static void showUserNavigation() {
-        showText("Для отладки выполнения заданий впишите номер задания ниже.\nНапример: \"" +
-                (new Random().nextInt(4) + 1)  + "\"\nИли \"exit\" для выхода.");
+        int rndEgNumber = new Random().nextInt(4) + 1;
+        showText("Для отладки выполнения заданий впишите номер задания ниже.\nНапример: \"" + rndEgNumber + "\"\nИли" +
+                " \"exit\" для выхода.");
 
         Scanner scan = new Scanner(System.in);
         String num = scan.next();
@@ -48,8 +47,6 @@ public class Main {
                 showText("Необходимо указать число от 1 до 5 или слово \"exit\" для завершения работы программы!\n");
                 showUserNavigation();
             }
-        } else {
-            return;
         }
     }
 

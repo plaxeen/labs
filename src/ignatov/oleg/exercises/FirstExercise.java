@@ -14,10 +14,10 @@ public class FirstExercise {
         showText("Задание номер 1\n\n\tОпределить, принадлежит ли точка с координатами (х, у) заштрихованной части" +
                 " плоскости (рисунок 1.8 в файле \"Лабораторные работы по вариантам\")\n");
 
-        imputeCoords();
+        inputCoords();
     }
 
-    private void imputeCoords() {
+    private void inputCoords() {
         showText("Введите x и y через пробел или поочередно через перенос строки. Например, если x=1, а y=2 – " +
                 "введите: \"1 2\"");
 
@@ -33,7 +33,7 @@ public class FirstExercise {
         } catch (InputMismatchException exception) {
             showText("Введены неверные значения!\nЧтобы ввести координату с плавающей запятой (дробную), необходимо " +
                     "указать символ запятой, а не точку\n");
-            imputeCoords();
+            inputCoords();
         }
     }
 
