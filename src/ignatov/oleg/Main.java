@@ -1,6 +1,7 @@
 package ignatov.oleg;
 
 import ignatov.oleg.exercises.FirstExercise;
+import ignatov.oleg.exercises.FourthExercise;
 import ignatov.oleg.exercises.SecondExercise;
 import ignatov.oleg.exercises.ThreeExercise;
 
@@ -37,6 +38,7 @@ public class Main {
                         new ThreeExercise();
                         break;
                     case 4:
+                        new FourthExercise();
                         break;
                     case 5:
                         break;
