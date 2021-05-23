@@ -2,6 +2,7 @@ package ignatov.oleg;
 
 import ignatov.oleg.exercises.FirstExercise;
 import ignatov.oleg.exercises.SecondExercise;
+import ignatov.oleg.exercises.ThreeExercise;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -33,6 +34,7 @@ public class Main {
                         new SecondExercise();
                         break;
                     case 3:
+                        new ThreeExercise();
                         break;
                     case 4:
                         break;

@@ -26,6 +26,6 @@ public class SecondExercise {
             showNumbersByDouble("a = %.1f\n", x - Math.pow(x, 2) / 2 - Math.pow(x, 3) / 2);
             x += 0.2;
         } while (x <= X_FINAL_LIMIT);
-        showText("");
+        showText("\nЗадание завершено. Возвращение в главное меню...\n\n");
     }
 }
