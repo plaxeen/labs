@@ -22,15 +22,19 @@ public class ThreeExercise {
         int[] threeNumbers = new int[3];
 
         Scanner scan = new Scanner(System.in);
-        threeNumbers[0] = scan.nextInt();
-        threeNumbers[1] = scan.nextInt();
-        threeNumbers[2] = scan.nextInt();
-        showText("Введены следующие значения: " +
-                threeNumbers[0] + ", " +
-                threeNumbers[1] + ", " +
-                threeNumbers[2] + ".");
+        if (!scan.hasNext("exit")) {
+            threeNumbers[0] = scan.nextInt();
+            threeNumbers[1] = scan.nextInt();
+            threeNumbers[2] = scan.nextInt();
+            showText("Введены следующие значения: " +
+                    threeNumbers[0] + ", " +
+                    threeNumbers[1] + ", " +
+                    threeNumbers[2] + ".");
 
-        compute(threeNumbers);
+            compute(threeNumbers);
+        } else {
+            showText("Выход из задания номер 3...\n\n");
+        }
     }
 
     private void compute(int[] threeNumbers) {

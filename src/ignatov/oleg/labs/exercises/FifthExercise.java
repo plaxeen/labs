@@ -21,15 +21,19 @@ public class FifthExercise {
         showText("Ввод числа a:");
 
         Scanner scan = new Scanner(System.in);
-        try {
-            float scannedANum = scan.nextFloat();
-            showText("Значение A=" + scannedANum);
+        if (!scan.hasNext("exit")) {
+            try {
+                float scannedANum = scan.nextFloat();
+                showText("Значение A=" + scannedANum);
 
-            compute(scannedANum);
-        } catch (InputMismatchException exception) {
-            showText("Введено неверное значение А!\nЧтобы ввести число с плавающей запятой (дробную), необходимо " +
-                    "указать символ запятой, а не точку\n");
-            inputNum();
+                compute(scannedANum);
+            } catch (InputMismatchException exception) {
+                showText("Введено неверное значение А!\nЧтобы ввести число с плавающей запятой (дробную), необходимо " +
+                        "указать символ запятой, а не точку\n");
+                inputNum();
+            }
+        } else {
+            showText("Выход из задания номер 5...\n\n");
         }
     }
 

@@ -22,18 +22,22 @@ public class FirstExercise {
                 "введите: \"1 2\"");
 
         Scanner scan = new Scanner(System.in);
-        try {
-            float coordinateX = scan.nextFloat();
-            float coordinateY = scan.nextFloat();
-            showText("Значение X=" + coordinateX + ", значение Y=" + coordinateY + "\n");
-            // На рисунке незакрашенная область ограничена четырьмя линиями: x=-1; y=1; x=1 и y=-1, x принадлежит [-1;1]
-            // y принадлежит [-1;1].
+        if (!scan.hasNext("exit")) {
+            try {
+                float coordinateX = scan.nextFloat();
+                float coordinateY = scan.nextFloat();
+                showText("Значение X=" + coordinateX + ", значение Y=" + coordinateY + "\n");
+                // На рисунке незакрашенная область ограничена четырьмя линиями: x=-1; y=1; x=1 и y=-1, x принадлежит [-1;1]
+                // y принадлежит [-1;1].
 
-            computeArea(coordinateX, coordinateY);
-        } catch (InputMismatchException exception) {
-            showText("Введены неверные значения!\nЧтобы ввести координату с плавающей запятой (дробную), необходимо " +
-                    "указать символ запятой, а не точку\n");
-            inputCoords();
+                computeArea(coordinateX, coordinateY);
+            } catch (InputMismatchException exception) {
+                showText("Введены неверные значения!\nЧтобы ввести координату с плавающей запятой (дробную), необходимо " +
+                        "указать символ запятой, а не точку\n");
+                inputCoords();
+            }
+        } else {
+            showText("Выход из задания номер 1...\n\n");
         }
     }
 
@@ -41,10 +45,10 @@ public class FirstExercise {
         if (coordinateY <= -coordinateX + 1 &&
                 coordinateY <= coordinateX + 1 &&
                 coordinateY >= coordinateX -1 &&
-                coordinateY >= -coordinateX-1) {
-            showText("Точка принадлежит заштрихованной области.");
-        } else {
+                coordinateY >= -coordinateX - 1) {
             showText("Точка не принадлежит заштрихованной области.");
+        } else {
+            showText("Точка принадлежит заштрихованной области.");
         }
         showText("Задание завершено. Возвращение в главное меню...\n\n");
     }

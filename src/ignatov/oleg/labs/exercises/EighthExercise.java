@@ -21,16 +21,20 @@ public class EighthExercise {
                 "введите: \"1 0,0001\"");
 
         Scanner scan = new Scanner(System.in);
-        try {
-            float x = scan.nextFloat();
-            float e = scan.nextFloat();
-            showText("Значение x=" + x + ", значение ɛ=" + e);
+        if (!scan.hasNext("exit")) {
+            try {
+                float x = scan.nextFloat();
+                float e = scan.nextFloat();
+                showText("Значение x=" + x + ", значение ɛ=" + e);
 
-            compute(x, e);
-        } catch (InputMismatchException exception) {
-            showText("Введены неверные значения!\nЧтобы ввести значения с плавающей запятой (дробные), необходимо " +
-                    "указать символ запятой, а не точки\n");
-            inputQuest();
+                compute(x, e);
+            } catch (InputMismatchException exception) {
+                showText("Введены неверные значения!\nЧтобы ввести значения с плавающей запятой (дробные), необходимо " +
+                        "указать символ запятой, а не точки\n");
+                inputQuest();
+            }
+        } else {
+            showText("Выход из задания номер 8...\n\n");
         }
     }
 

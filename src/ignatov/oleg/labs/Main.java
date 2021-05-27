@@ -2,6 +2,7 @@ package ignatov.oleg.labs;
 
 import ignatov.oleg.labs.exercises.*;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -20,11 +21,10 @@ public class Main {
                 " \"exit\" для выхода.");
 
         Scanner scan = new Scanner(System.in);
-        String num = scan.next();
-        if (!num.equals("exit")){
+        if (!scan.hasNext("exit")){
             try {
-                int chapterNumber = Integer.parseInt(num);
-                switch (chapterNumber) {
+                int exerciseNumber = scan.nextInt();
+                switch (exerciseNumber) {
                     case 1:
                         new FirstExercise();
                         break;
@@ -50,14 +50,17 @@ public class Main {
                         new EighthExercise();
                         break;
                     default:
-                        showText("Задания " + num + " не существует.");
+                        showText("Задания " + exerciseNumber + " не существует.\n\n");
                         break;
                 }
                 showUserNavigation();
-            } catch (NumberFormatException exception) {
-                showText("Необходимо указать число от 1 до 8 или слово \"exit\" для завершения работы программы!\n");
+            } catch (InputMismatchException exception) {
+                showText("Введенный текст не поддерживается.\nНеобходимо указать число от 1 до 8 или слово \"exit\"" +
+                        " для завершения работы программы!\n");
                 showUserNavigation();
             }
+        } else {
+            showText("Завершение работы...");
         }
     }
 

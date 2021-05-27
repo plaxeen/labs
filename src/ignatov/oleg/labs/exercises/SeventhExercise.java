@@ -25,16 +25,20 @@ public class SeventhExercise {
                 "введите: \"1 2\"");
 
         Scanner scan = new Scanner(System.in);
-        try {
-            float a = scan.nextFloat();
-            float b = scan.nextFloat();
-            showText("Значение A=" + a + ", значение B=" + b);
+        if (!scan.hasNext("exit")) {
+            try {
+                float a = scan.nextFloat();
+                float b = scan.nextFloat();
+                showText("Значение A=" + a + ", значение B=" + b);
 
-            compute(a, b);
-        } catch (InputMismatchException exception) {
-            showText("Введены неверные значения!\nЧтобы ввести значения с плавающей запятой (дробные), необходимо " +
-                    "указать символ запятой, а не точки\n");
-            inputNums();
+                compute(a, b);
+            } catch (InputMismatchException exception) {
+                showText("Введены неверные значения!\nЧтобы ввести значения с плавающей запятой (дробные), необходимо " +
+                        "указать символ запятой, а не точки\n");
+                inputNums();
+            }
+        } else {
+            showText("Выход из задания номер 7...\n\n");
         }
     }
 
