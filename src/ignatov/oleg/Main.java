@@ -44,11 +44,13 @@ public class Main {
                         new SixthExercise();
                         break;
                     case 7:
+                        new SeventhExercise();
                         break;
                     case 8:
+                        new EighthExercise();
                         break;
                     default:
-                        showText("Задания " + num + "не существует.");
+                        showText("Задания " + num + " не существует.");
                         break;
                 }
                 showUserNavigation();

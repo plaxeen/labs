@@ -23,6 +23,8 @@ public class FifthExercise {
         Scanner scan = new Scanner(System.in);
         try {
             float scannedANum = scan.nextFloat();
+            showText("Значение A=" + scannedANum);
+
             compute(scannedANum);
         } catch (InputMismatchException exception) {
             showText("Введено неверное значение А!\nЧтобы ввести число с плавающей запятой (дробную), необходимо " +

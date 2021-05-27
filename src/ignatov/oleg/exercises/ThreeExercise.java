@@ -25,6 +25,10 @@ public class ThreeExercise {
         threeNumbers[0] = scan.nextInt();
         threeNumbers[1] = scan.nextInt();
         threeNumbers[2] = scan.nextInt();
+        showText("Введены следующие значения: " +
+                threeNumbers[0] + ", " +
+                threeNumbers[1] + ", " +
+                threeNumbers[2] + ".");
 
         compute(threeNumbers);
     }
