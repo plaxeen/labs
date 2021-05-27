@@ -1,8 +1,8 @@
-package ignatov.oleg.exercises;
+package ignatov.oleg.labs.exercises;
 
 import java.util.Scanner;
 
-import static ignatov.oleg.Utils.showText;
+import static ignatov.oleg.labs.Utils.showText;
 
 public class ThreeExercise {
     public ThreeExercise() {

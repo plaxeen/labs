@@ -1,6 +1,6 @@
-package ignatov.oleg.exercises;
+package ignatov.oleg.labs.exercises;
 
-import static ignatov.oleg.Utils.*;
+import static ignatov.oleg.labs.Utils.*;
 
 public class FourthExercise {
     public FourthExercise() {

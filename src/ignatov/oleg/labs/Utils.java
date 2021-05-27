@@ -1,4 +1,4 @@
-package ignatov.oleg;
+package ignatov.oleg.labs;
 
 public class Utils {
     public static void showText(String text) {

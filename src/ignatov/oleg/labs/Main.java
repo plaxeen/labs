@@ -1,11 +1,11 @@
-package ignatov.oleg;
+package ignatov.oleg.labs;
 
-import ignatov.oleg.exercises.*;
+import ignatov.oleg.labs.exercises.*;
 
 import java.util.Random;
 import java.util.Scanner;
 
-import static ignatov.oleg.Utils.showText;
+import static ignatov.oleg.labs.Utils.showText;
 
 public class Main {
 
