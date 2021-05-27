@@ -11,7 +11,7 @@ public class SecondExercise {
     private final static double X_FINAL_LIMIT = 3.4;
     private final static double STEP = 0.2;
 
-    public void helloMessage() {
+    private void helloMessage() {
         showText("Задание номер 2\n\n\tДля x принадлежащего [–3,2; 3,4] вычислить a = x - x^2/2 - x^3/2. Шаг" +
                 " изменения x равен 0,2.\n");
 

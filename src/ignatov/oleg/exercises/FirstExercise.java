@@ -10,7 +10,7 @@ public class FirstExercise {
         helloMessage();
     }
 
-    public void helloMessage() {
+    private void helloMessage() {
         showText("Задание номер 1\n\n\tОпределить, принадлежит ли точка с координатами (х, у) заштрихованной части" +
                 " плоскости (рисунок 1.8 в файле \"Лабораторные работы по вариантам\")\n");
 

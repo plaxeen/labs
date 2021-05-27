@@ -1,9 +1,6 @@
 package ignatov.oleg;
 
-import ignatov.oleg.exercises.FirstExercise;
-import ignatov.oleg.exercises.FourthExercise;
-import ignatov.oleg.exercises.SecondExercise;
-import ignatov.oleg.exercises.ThreeExercise;
+import ignatov.oleg.exercises.*;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -18,7 +15,7 @@ public class Main {
     }
 
     private static void showUserNavigation() {
-        int rndEgNumber = new Random().nextInt(4) + 1;
+        int rndEgNumber = new Random().nextInt(7) + 1;
         showText("Для отладки выполнения заданий впишите номер задания ниже.\nНапример: \"" + rndEgNumber + "\"\nИли" +
                 " \"exit\" для выхода.");
 
@@ -41,6 +38,14 @@ public class Main {
                         new FourthExercise();
                         break;
                     case 5:
+                        new FifthExercise();
+                        break;
+                    case 6:
+                        new SixthExercise();
+                        break;
+                    case 7:
+                        break;
+                    case 8:
                         break;
                     default:
                         showText("Задания " + num + "не существует.");
@@ -48,7 +53,7 @@ public class Main {
                 }
                 showUserNavigation();
             } catch (NumberFormatException exception) {
-                showText("Необходимо указать число от 1 до 5 или слово \"exit\" для завершения работы программы!\n");
+                showText("Необходимо указать число от 1 до 8 или слово \"exit\" для завершения работы программы!\n");
                 showUserNavigation();
             }
         }

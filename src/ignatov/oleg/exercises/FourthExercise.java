@@ -27,13 +27,8 @@ public class FourthExercise {
         showText("├─────────┼─────────┤");
         do {
             double y = Math.sin(3 * Math.tan(x) * Math.sqrt(Math.abs(x)));
-            showNumbersToTable("│ " + (x < 0 ? "":" ") + " %.1f   │ " + (y < 0 ? "":" ") + " %.1f   │\n",
-                    x, y);
-            if (x + STEP <= X_FINAL_LIMIT) {
-                showText("├─────────┼─────────┤");
-            } else {
-                showText("└─────────┴─────────┘");
-            }
+            showNumbersToTable(x, y);
+            showText(x + STEP <= X_FINAL_LIMIT ? "├─────────┼─────────┤" : "└─────────┴─────────┘");
             x += STEP;
         } while (x <= X_FINAL_LIMIT);
         showText("\nЗадание завершено. Возвращение в главное меню...\n\n");
