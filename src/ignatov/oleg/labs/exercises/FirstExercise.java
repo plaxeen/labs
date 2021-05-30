@@ -27,8 +27,6 @@ public class FirstExercise {
                 float coordinateX = scan.nextFloat();
                 float coordinateY = scan.nextFloat();
                 showText("Значение X=" + coordinateX + ", значение Y=" + coordinateY + "\n");
-                // На рисунке незакрашенная область ограничена четырьмя линиями: x=-1; y=1; x=1 и y=-1, x принадлежит [-1;1]
-                // y принадлежит [-1;1].
 
                 computeArea(coordinateX, coordinateY);
             } catch (InputMismatchException exception) {
